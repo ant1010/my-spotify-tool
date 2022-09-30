@@ -1,0 +1,52 @@
+.modal{
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center; 
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+
+}
+
+.box{
+    width: 40vw;
+    height:40vh;
+    background-color: black;
+    position: absolute;
+    display: flex;              
+    flex-direction: column;
+    justify-content:center;  
+    align-items: center;   
+    border-radius: 12px;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+    top:10vh;
+    
+}
+.modal_close{
+   width:25vw;
+
+   
+}
+.modal_submit{
+    width:25vw;
+    margin:2vh;
+}
+.name{
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin:10px;
+}
