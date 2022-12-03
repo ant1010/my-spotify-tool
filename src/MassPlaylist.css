@@ -1,0 +1,68 @@
+.container_mp{
+    position: relative;
+    top:3vh;
+    left:0%;
+    height: 80vh;
+    width: 80vw;
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+     /* center items vertically, in this case */
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.form_mp{
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center; 
+}
+
+
+.textBox_mp{
+    height:20vh;
+    overflow: auto;
+    width:40vw;
+    margin: 2vh 3vh;
+    border-radius:5px;
+    border:.0rem solid grey;
+    box-shadow: 0px -2px 10px 5px rgba(30, 190, 43, 0.4);
+}
+.submit{
+
+  background-color: #1db954;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width:20vw;
+
+
+
+
+}
+.submit:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+.submit{
+    height:5vh;
+    width:35vw;
+}
+.PS{
+    font-size:2vh;
+    height:4vh;
+    padding: 0px 10px;
+  
+}
