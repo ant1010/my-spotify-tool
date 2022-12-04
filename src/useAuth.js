@@ -11,7 +11,7 @@ export default function useAuth(code) {
        return;
     }
       
-      axios.post('https://my-spotify-tool.vercel.app/login',{
+      axios.post('/api/login',{
           code,
         }).then(res => {
               setAccessToken(res.data.accessToken);
@@ -31,7 +31,7 @@ export default function useAuth(code) {
    useEffect(() => {
        if(!refreshToken|| !expiresIn){return}
     const interval = setInterval(( ) =>{
-         axios.post('https://my-spotify-tool.vercel.app/refresh',{
+         axios.post('/api/refresh',{
         refreshToken,
       }).then(res => {
             setAccessToken(res.data.accessToken);

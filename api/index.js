@@ -7,8 +7,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
-
-app.post('/refresh', (req,res) => {
+app.set('port', (process.env.PORT || 3001));
+app.post('/api/refresh', (req,res) => {
     const refreshToken = req.body.refreshToken
     const spotifyApi = new SpotifyWebApi({
         redirectUri:'https://my-spotify-tool.vercel.app/',
@@ -27,7 +27,7 @@ app.post('/refresh', (req,res) => {
         console.log("refresh error:::");
     })
 })
-app.post('/login',(req,res) =>{
+app.post('/api/login',(req,res) =>{
     const code = req.body.code;
    
     const spotifyApi = new SpotifyWebApi({
@@ -46,5 +46,5 @@ app.post('/login',(req,res) =>{
         res.sendStatus(400);
     })
 })
-app.listen(3001);
+app.listen(app.get('port'));
 module.exports = app	
