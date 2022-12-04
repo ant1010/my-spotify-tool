@@ -5,16 +5,18 @@ import "./Body.css"
 import Home from "./Home.js"
 import Library from "./Library.js"
 
-function Body({spotify,action}) {
+function Body({spotify,action,logout}) {
    
    const [currentAction, setAction] = useState(action);
    useEffect(() =>{
        setAction(action);
    },[action])
    
+   
     return (
         <div className = "body">
         <h4 className="body_title">{currentAction}</h4>
+        <button onClick = {logout}className="logout">Logout</button>
     {currentAction === "Home" ?  (
          <Home spotify = {spotify}/>
     ) : currentAction === "Search" ? (

@@ -8,7 +8,7 @@ import SpotifyWebApi  from "spotify-web-api-js";
 import {useDataLayerValue} from "./ServiceProvider"
 
  const spotify = new SpotifyWebApi({clientId:'6ca42bd62f0542959053535545c73611',});
- function Player({code}) {
+ function Player({code,logout}) {
      const [action,setAction] = useState('Home');
      const [currentSong, setSong] = useState();
      const accessToken = useAuth(code);
@@ -35,8 +35,9 @@ import {useDataLayerValue} from "./ServiceProvider"
         <div className = "player__body">
            
             <Sidebar switcher= {switcher}/>
-            <Body spotify = {spotify} action = {action}/>
+            <Body spotify = {spotify} logout={logout}action = {action}/>
             <Footer accessToken = {accessToken} trackUri = {currentSong} />
+            
             
         </div>
             

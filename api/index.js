@@ -24,10 +24,12 @@ app.post('/refresh', (req,res) => {
         }
     ).catch(() =>{
         res.sendStatus(400);
+        console.log("refresh error:::");
     })
 })
 app.post('/login',(req,res) =>{
     const code = req.body.code;
+   
     const spotifyApi = new SpotifyWebApi({
         redirectUri:'https://my-spotify-tool.vercel.app/',
         clientId: '6ca42bd62f0542959053535545c73611',
@@ -40,7 +42,7 @@ app.post('/login',(req,res) =>{
             expiresIn: data.body.expires_in
         })
     }).catch((err) =>{
-        console.log(err)
+        console.log("login error:::",err)
         res.sendStatus(400);
     })
 })
